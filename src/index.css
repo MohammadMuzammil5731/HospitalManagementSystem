@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Medical theme - Professional healthcare palette */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Medical blue primary */
+    --primary: 210 85% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 80% 92%;
+    --primary-glow: 210 90% 60%;
+
+    /* Teal accent for health/wellness */
+    --secondary: 175 65% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 175 55% 92%;
+
+    /* Soft gray for muted elements */
+    --muted: 210 15% 94%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 175 65% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Medical red for critical/destructive */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success green for positive health indicators */
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 145 55% 92%;
+
+    /* Warning orange for alerts */
+    --warning: 35 90% 55%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 35 85% 92%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 210 85% 48%;
+
+    --radius: 0.625rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210, 85%, 48%), hsl(175, 65%, 45%));
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%), hsl(210, 20%, 99%));
+    --gradient-subtle: linear-gradient(180deg, hsl(210, 20%, 98%), hsl(210, 15%, 96%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210, 25%, 15%, 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(210, 25%, 15%, 0.1), 0 2px 4px -1px hsl(210, 25%, 15%, 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(210, 25%, 15%, 0.1), 0 4px 6px -2px hsl(210, 25%, 15%, 0.05);
+    --shadow-glow: 0 0 30px hsl(210, 90%, 60%, 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar */
+    --sidebar-background: 215 25% 15%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 210 85% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 20% 22%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 215 20% 25%;
+    --sidebar-ring: 210 85% 48%;
+  }
+
+  .dark {
+    --background: 215 25% 12%;
+    --foreground: 210 20% 95%;
+
+    --card: 215 25% 15%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 25% 15%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 210 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 70% 25%;
+    --primary-glow: 210 90% 60%;
+
+    --secondary: 175 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 175 50% 25%;
+
+    --muted: 215 20% 22%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 175 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 145 60% 50%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 145 50% 25%;
+
+    --warning: 35 85% 60%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 35 75% 25%;
+
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 210 85% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(210, 85%, 55%), hsl(175, 60%, 50%));
+    --gradient-card: linear-gradient(180deg, hsl(215, 25%, 15%), hsl(215, 25%, 18%));
+    --gradient-subtle: linear-gradient(180deg, hsl(215, 25%, 12%), hsl(215, 25%, 15%));
+
+    --shadow-sm: 0 1px 2px 0 hsl(0, 0%, 0%, 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0, 0%, 0%, 0.4), 0 2px 4px -1px hsl(0, 0%, 0%, 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0, 0%, 0%, 0.4), 0 4px 6px -2px hsl(0, 0%, 0%, 0.3);
+    --shadow-glow: 0 0 30px hsl(210, 90%, 60%, 0.4);
+
+    --sidebar-background: 215 30% 10%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 210 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 215 25% 18%;
+    --sidebar-ring: 210 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
